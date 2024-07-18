@@ -1,1 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-green: #00cc14;
+
+  --page-main-font-family: 'Inter', sans-serif;
+  --page-accent-font-family: 'PressStart2P', fantasy;
+  --page-main-font-weight: 400;
+  --header-font-weight: 700;
+
+  --page-background: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
+  repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
+  linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+
+  --text-color: var(--color-black);
+  --text-button: var(--page-background-color);
+}
