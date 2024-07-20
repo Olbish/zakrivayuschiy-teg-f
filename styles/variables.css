@@ -9,10 +9,18 @@
   --page-main-font-weight: 400;
   --header-font-weight: 700;
 
-  --page-background: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
-  repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
-  linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  --page-background: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 
-  --text-color: var(--color-black);
-  --text-button: var(--page-background-color);
+  --text-color: var(--color-black, #000000);
+  --text-button: var(var(--color-white), #ffffff);
+
+  --heart-countour-color: var(--color-black, #000000);
+  --heart-main-body-color: #ff0000;
+  --heart-sparks-color: var(--heart-main-body-color, #ff0000);
 }

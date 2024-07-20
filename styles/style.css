@@ -15,19 +15,17 @@
 */
 
 .page {
+  margin-top: 102px;
+  color: var(--text-color);
   font-family: var(--page-main-font-family, sans-serif);
-  font-variation-settings: "wght" var(--page-general-font-weight, 400);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   background-color: var(--page-background-color, #ffffff);
   background-image: var(--page-background, none);
   background-position: center;
   background-size: cover;
-  color: var(--text-color);
-  margin-top: 102px;
+  font-variation-settings: 'wght' var(--page-general-font-weight, 400);
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
 }
-
-
 
 /* Шапка */
 
@@ -45,26 +43,26 @@
 }
 
 .header__title {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  margin-block-start: clamp(0rem, -2.993rem + 12.77vw, 8.5rem);;
+  margin-block-start: clamp(0rem, -2.993rem + 12.77vw, 8.5rem);
   margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__span {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   margin-block-end: 22px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 .theme-menu__button {
   position: relative;
-  font-size: 14px;
-  border: none;
-  background: none;
-  text-transform: uppercase;
   margin-inline-start: 16px;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: none;
+  transition: opacity 0.3s ease;
   cursor: pointer;
   appearance: none;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -83,14 +81,14 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: "▶";
+  content: '▶';
   position: absolute;
   animation: arrow 0.5s ease-in-out infinite alternate;
   inset-inline-start: -15px;
 }
 
 .theme-menu__button::after {
-  content: "";
+  content: '';
   display: block;
   background: currentColor;
   transition: transform 0.3s ease;
@@ -130,7 +128,7 @@
 }
 
 .button::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -138,34 +136,31 @@
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
 }
 
 .button:hover::before {
   transform: scaleX(1);
 }
 
-.button__text,
 .button__icon {
   color: var(--text-button, #fff);
   mix-blend-mode: difference;
 }
 
 .card {
-  max-inline-size: clamp(23.4375rem, 13.4804rem + 42.4837vw, 43.75rem);;
   margin-inline: auto;
-  background-color: var(--page-background-color);
-  border: 2px solid var(--text-color);
   margin-block-end: 50px;
+  border: 2px solid var(--text-color);
+  background-color: var(--page-background-color);
+  max-inline-size: clamp(23.4375rem, 13.4804rem + 42.4837vw, 43.75rem);
 }
 
 .card__image {
   display: block;
-  object-fit: cover;
-  object-position: center;
   border-block-start: 2px solid var(--text-color);
   border-block-end: 2px solid var(--text-color);
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
 }
 
@@ -185,10 +180,13 @@
   inset-inline-end: 25px;
   inset-block-start: 29px;
   mix-blend-mode: hard-light;
-  font-variation-settings: var(--main-font-weight, 400)
+  font-variation-settings: var(--main-font-weight, 400);
 }
 
-@supports((text-stroke: 1px var(--page-background-color, #fff)) or (-webkit-text-stroke: 1px var(--page-background-color, #fff))) {
+@supports (
+  (text-stroke: 1px var(--page-background-color, #fff)) or
+    (-webkit-text-stroke: 1px var(--page-background-color, #fff))
+) {
   .card__container-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--page-background-color, #fff);
@@ -197,42 +195,60 @@
 }
 
 .card__title {
-  font-size: 18px;
-  font-variation-settings: "wght" var(--header-font-weight);
   padding: 6px 12px;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--header-font-weight);
 }
 
 .card__text {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  font-size: 18px;
-  font-variation-settings: "wght" var(--page-main-font-weight);
   padding: 23px 26px;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--page-main-font-weight);
 }
 
 .card__button {
   display: flex;
   justify-content: end;
+  gap: 2px;
   padding-inline-end: 25px;
   padding-block-end: 18px;
 }
 
 .card__like-button {
-  background: var(--page-background-color, #ffffff);
   border: 2px solid var(--text-color);
-  min-inline-size: 130px;
-  max-block-size: 38px;
+  font-family: var(--page-accent-font-family);
   font-size: 14px;
   line-height: 12.6px;
-  padding: 0px;
-  font-family: var(--page-accent-font-family);
-  font-variation-settings: "wght" var(--page-main-font-weight);
+  background: var(--page-background-color, #ffffff);
+  min-inline-size: 130px;
+  max-block-size: 38px;
+  font-variation-settings: 'wght' var(--page-main-font-weight);
+}
+
+/* Иконка сердца */
+
+.sparks {
+  opacity: 0;
 }
 
 .card__icon-button {
-  background: transparent;
   border: 2px solid transparent;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--text-color, #000000);
 }
 
 /* Футер */
@@ -245,11 +261,11 @@
 }
 
 .button__save {
+  margin-block-end: 103px;
+  border: 2px solid var(--text-color);
   background: var(--page-background-color);
   min-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   min-block-size: 55px;
-  border: 2px solid var(--text-color);
-  margin-block-end: 103px;
 }
 
 .button__icon {
@@ -258,8 +274,99 @@
 }
 
 .button__text {
+  margin-block-start: 3px;
+  color: var(--text-button, #fff);
   font-family: var(--page-accent-font-family);
   font-size: 14px;
   appearance: none;
-  margin-block-start: 3px;
+  mix-blend-mode: difference;
+}
+
+/* Модальное окно */
+
+.modal__window {
+  border: 2px solid var(--text-color, #000000);
+  padding: 25px 30px;
+  color: var(--text-color, #000000);
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: var(--page-background-color, #ffffff);
+  max-inline-size: 355px;
+}
+
+.modal__window::backdrop {
+  opacity: 0.75;
+  background: var(--color-black, #000000);
+}
+
+.modal__window-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-block-end: 30px;
+}
+
+.modal__window-content-floppy {
+  inline-size: 90px;
+  block-size: 39px;
+}
+
+.modal__button {
+  border: 2px solid var(--text-color);
+  background: var(--page-background-color, #ffffff);
+  inline-size: 298px;
+  block-size: 38px;
+  cursor: pointer;
+}
+
+/* Фильтры */
+
+.filter-grayscale {
+  filter: grayscale(70%);
+}
+
+.filter-multiple {
+  filter: contrast(50%) hue-rotate(35deg) saturate(130%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(210deg);
+}
+
+.filter-saturate {
+  filter: saturate(250%);
+}
+
+.filter-invert {
+  filter: invert(100%);
+}
+
+.filter-sepia {
+  filter: sepia(90%);
+}
+
+.filter-blur {
+  filter: blur(10px);
+}
+
+
+@media (width <= 375px) {
+  .modal__window {
+    padding: 28px 34px 28px 40px;
+    max-inline-size: 340px;
+  }
+
+  .button__icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+
+  .button__save {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 20.5px 15px 20.5px;
+  }
 }

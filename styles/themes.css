@@ -10,10 +10,17 @@
   --page-main-font-weight: 400;
   --text-color: var(--color-black, #000000);
   --page-background-color: var(--color-white, #ffffff);
-  --page-background: repeating-linear-gradient(90deg, #d3d3d3 0px 2px, transparent 2px 4px),
-  repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
-  linear-gradient(#e7e7e7 0.01%,#1a1a1a);
-  --text-button: var(--page-background-color);
+  --page-background: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(#d3d3d3 0px 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  --text-button: var(--color-white, #ffffff);
+  --heart-countour-color: var(--color-black, #000000);
+  --heart-main-body-color: red;
+  --heart-sparks-color: var(--like-main-body-color, red);
 }
 
 :root.theme-dark {
@@ -21,20 +28,35 @@
   --page-main-font-weight: 465;
   --text-color: var(--color-green, #00cc14);
   --page-background-color: var(--color-black, #000000);
-  --page-background: repeating-linear-gradient(90deg, #000 0px 2px, transparent 2px 4px),
-  repeating-linear-gradient(#000 0px 2px, transparent 2px 4px),
-  linear-gradient(#007f0c,#004306);
-  --text-button: var(--page-background-color);
+  --page-background: repeating-linear-gradient(
+      90deg,
+      #000 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(#000 0px 2px, transparent 2px 4px),
+    linear-gradient(#007f0c, #004306);
+  --text-button: var(--color-green, #00cc14);
+  --heart-countour-color: var(--color-green, #00cc14);
+  --heart-main-body-color: red;
+  --heart-sparks-color: var(--like-main-body-color, red);
 }
 
 @media (prefers-color-scheme: dark) {
- :root {
-  --header-font-weight: 785;
-  --page-main-font-weight: 465;
-  --text-color: var(--color-green, #00cc14);
-  --page-background-color: var(--color-black, #000000);
-  --page-background: repeating-linear-gradient(90deg, #000 0px 2px, transparent 2px 4px),
-  repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
-  linear-gradient(180deg, #007f0c,#004306);
- }
+  :root {
+    --header-font-weight: 785;
+    --page-main-font-weight: 465;
+    --text-color: var(--color-green, #00cc14);
+    --page-background-color: var(--color-black, #000000);
+    --page-background: repeating-linear-gradient(
+        90deg,
+        #000 0px 2px,
+        transparent 2px 4px
+      ),
+      repeating-linear-gradient(180deg, #000 0px 2px, transparent 2px 4px),
+      linear-gradient(180deg, #007f0c, #004306);
+    --text-button: var(--color-green, #00cc14);
+    --heart-countour-color: var(--color-green, #00cc14);
+    --heart-main-body-color: red;
+    --heart-sparks-color: var(--like-main-body-color, red);
+  }
 }
