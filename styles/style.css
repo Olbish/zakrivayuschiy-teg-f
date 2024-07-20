@@ -145,6 +145,8 @@
 .button__icon {
   color: var(--text-button, #fff);
   mix-blend-mode: difference;
+  block-size: 21px;
+  inline-size: 21px;
 }
 
 .card {
@@ -266,11 +268,6 @@
   background: var(--page-background-color);
   min-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   min-block-size: 55px;
-}
-
-.button__icon {
-  block-size: 21px;
-  inline-size: 21px;
 }
 
 .button__text {
