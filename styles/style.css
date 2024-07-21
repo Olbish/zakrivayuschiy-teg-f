@@ -20,8 +20,8 @@
   font-family: var(--page-main-font-family, sans-serif);
   background-color: var(--page-background-color, #ffffff);
   background-image: var(--page-background, none);
-  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   font-variation-settings: 'wght' var(--page-general-font-weight, 400);
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -105,8 +105,8 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 11px;
-  margin-block-end: 25px;
+  gap: 9px;
+  margin-block-end: 18px;
 }
 
 /* Карточки */
@@ -116,6 +116,13 @@
   z-index: 1;
   cursor: pointer;
   appearance: none;
+  transition: box-shadow 0.3s ease;
+  border: 2px solid var(--text-color);
+  font-family: var(--page-accent-font-family);
+  font-size: 14px;
+  line-height: 12.6px;
+  background: var(--page-background-color, #ffffff);
+  font-variation-settings: 'wght' var(--page-main-font-weight);
 }
 
 .button:focus {
@@ -124,7 +131,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
-  transition: box-shadow 0.3s ease;
 }
 
 .button::before {
@@ -164,6 +170,7 @@
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
+  min-block-size: 696px;
 }
 
 .card__container {
@@ -182,7 +189,7 @@
   inset-inline-end: 25px;
   inset-block-start: 29px;
   mix-blend-mode: hard-light;
-  font-variation-settings: var(--main-font-weight, 400);
+  font-weight: 400;
 }
 
 @supports (
@@ -197,7 +204,7 @@
 }
 
 .card__title {
-  padding: 6px 12px;
+  padding: 7px 10px;
   font-size: 18px;
   font-variation-settings: 'wght' var(--header-font-weight);
 }
@@ -205,8 +212,8 @@
 .card__text {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 23px 26px;
+  gap: 25px;
+  padding: 25px 25px;
   font-size: 18px;
   font-variation-settings: 'wght' var(--page-main-font-weight);
 }
@@ -216,18 +223,12 @@
   justify-content: end;
   gap: 2px;
   padding-inline-end: 25px;
-  padding-block-end: 18px;
+  padding-block-end: 25px;
 }
 
 .card__like-button {
-  border: 2px solid var(--text-color);
-  font-family: var(--page-accent-font-family);
-  font-size: 14px;
-  line-height: 12.6px;
-  background: var(--page-background-color, #ffffff);
   min-inline-size: 130px;
   max-block-size: 38px;
-  font-variation-settings: 'wght' var(--page-main-font-weight);
 }
 
 /* Иконка сердца */
@@ -243,6 +244,8 @@
   cursor: pointer;
   inline-size: 39px;
   block-size: 36px;
+  margin-inline-end: 4px;
+  margin-block-start: 2px;
 }
 
 .card__icon-button:focus {
@@ -264,7 +267,6 @@
 
 .button__save {
   margin-block-end: 103px;
-  border: 2px solid var(--text-color);
   background: var(--page-background-color);
   min-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   min-block-size: 55px;
@@ -310,7 +312,6 @@
 }
 
 .modal__button {
-  border: 2px solid var(--text-color);
   background: var(--page-background-color, #ffffff);
   inline-size: 298px;
   block-size: 38px;
@@ -349,9 +350,27 @@
 
 
 @media (width <= 375px) {
+
+  .card__image {
+    min-block-size: 375px;
+  }
+  
+  .header__title {
+    margin-block-start: 120px;
+  }
+  
   .modal__window {
-    padding: 28px 34px 28px 40px;
-    max-inline-size: 340px;
+    min-inline-size: 340px;
+    padding: 25px 30px 25px 40px
+  }
+
+  .modal__button {
+    max-inline-size: 257px;
+  }
+
+  .modal__window-content {
+    max-inline-size: 257px;
+    font-size: 14px;
   }
 
   .button__icon {

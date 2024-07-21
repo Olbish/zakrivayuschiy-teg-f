@@ -20,8 +20,8 @@
 
 <body class="page">
   <header class="header card">
-    <h1 class="header__title">&lt;/HTML&gt;</h1>
-    <span class="header__span">Закрывающий тег</span>
+    <a class="header__title">&lt;/HTML&gt;</a>
+    <h1 class="header__span">Закрывающий тег</h1>
     <nav class="theme-menu header__theme-menu">
       <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
       <ul class="theme-menu__list">
@@ -58,12 +58,12 @@
           возможно, подумать, как новые знания могут повлиять на ваше будущее.
         </p>
         <p> 
-          Я был заряжен на супер успех. Фритрек показался не сложным.
+          Был на супер позитиве прежде чем начать
         </p>
       </div>
       <div class="card__button">
         <button type="button" class="card__icon-button">
-          <svg fill="none" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 39 36" class="like-icon">
+          <svg fill="none" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 39 36" class="like-icon" aria-hidden="true">
             <g class="heart">
               <path class="contour"
                 d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
@@ -358,7 +358,7 @@
       </div>
     </article>
   </main>
-  <footer class="footer">
+  <div class="footer">
     <button type="button"
     onclick="window.modal__window.showModal();"
     aria-controls="modal__window"
@@ -370,20 +370,20 @@
         Сохранить на память
       </span>
     </button>
-  </footer>
-  <script src="./scripts/like.js"></script>
+  </div>
   <dialog class="modal__window" id="modal__window">
     <div class="modal__window-content">
       <svg class="modal__window-content-floppy" viewBox="0 0 39 39">
         <use href="svg/floppy.svg#floppy"/>
       </svg>
-      <span>Вставьте дискету,чтобы продолжить</span>
+      <p>Вставьте дискету,чтобы продолжить</p>
     </div>
-    <form>
-      <button type="submit" class="modal__button">
+    <form method="dialog">
+      <button type="submit" class="button modal__button">
         <span class="button__text">ОК</span>
       </button>
     </form>
   </dialog>
+  <script src="./scripts/like.js"></script>
 </body>
 </html>
